@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .schedule-container {
+            width: 90%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .schedule-table thead th {
+            background-color: #0073e6;
+            color: #fff;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .schedule-table tbody td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+
+        .schedule-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .schedule-table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .time-column {
+            background-color: #0073e6;
+            color: #fff;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .schedule-container {
+                width: 95%;
+            }
+
+            .schedule-table thead, .schedule-table tbody, .schedule-table th, .schedule-table td, .schedule-table tr {
+                display: block;
+            }
+
+            .schedule-table thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            .schedule-table tr {
+                border: 1px solid #ccc;
+            }
+
+            .schedule-table td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+                text-align: left;
+            }
+
+            .schedule-table td:before {
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                content: attr(data-label);
+                color: #000;
+                font-weight: bold;
+            }
+
+            .time-column {
+                background-color: #0073e6;
+                color: #fff;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="schedule-container">
+        <h1>Program Timetable</h1>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th class="time-column">Time</th>
+                    <th>Activity</th>
+                    <th>Responsible</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-column">9:00 - 9:30</td>
+                    <td>Registration</td>
+                    <td>All</td>
+                </tr>
+                <tr>
+                    <td class="time-column">9:30 - 9:35</td>
+                    <td>Introduction of Guests & Welcoming remarks</td>
+                    <td>All, Secretary</td>
+                </tr>
+                <tr>
+                    <td class="time-column">9:35 - 9:45</td>
+                    <td>Opening remarks, Constituting the Convocation, Preamble to award presentation</td>
+                    <td>President of the Convocation</td>
+                </tr>
+                <tr>
+                    <td class="time-column">9:45 - 10:00</td>
+                    <td>Awarding prizes to best students</td>
+                    <td>Rector</td>
+                </tr>
+                <tr>
+                    <td class="time-column">10:00 - 10:20</td>
+                    <td>Awarding prizes to EASTCSO leaders</td>
+                    <td>Rector, Guest of Honor</td>
+                </tr>
+                <tr>
+                    <td class="time-column">10:20 - 10:40</td>
+                    <td>Keynote Address: Government support and enablers of digital economy & start up ecosystems that use data</td>
+                    <td>Guest of Honor</td>
+                </tr>
+                <tr>
+                    <td class="time-column">10:40 - 11:10</td>
+                    <td>1st Presentation: The Ecosystem of Tanzania ICT Commission</td>
+                    <td>Mr. John Behisa</td>
+                </tr>
+                <tr>
+                    <td class="time-column">11:10 - 12:45</td>
+                    <td>
+                        <strong>1st Presentation:</strong><br>
+                        <em>Role of Statistical Literacy in Agriculture Product: Evidence from Smallholder Farmers</em> - Ms. Joan A. Kaslima<br><br>
+                        <strong>2nd Presentation:</strong><br>
+                        <em>The Relevance of Data Science in the Production of Official Statistics</em> - Hanenya KASASE<br><br>
+                        <strong>Discussion:</strong> (Presentation 1, 2 & 3)
+                    </td>
+                    <td>Dr. David Miskwe, Ali, Moderator</td>
+                </tr>
+                <tr>
+                    <td class="time-column">12:45 - 12:50</td>
+                    <td>Departure Remarks of Guest of Honor</td>
+                    <td>Rector & Guest of Honor, Invited Guests</td>
+                </tr>
+                <tr>
+                    <td class="time-column">12:50 - 13:00</td>
+                    <td>Group Photo</td>
+                    <td>MC</td>
+                </tr>
+                <tr>
+                    <td class="time-column">13:00 - 14:00</td>
+                    <td>Health Break</td>
+                    <td>Rector and invited Guest</td>
+                </tr>
+                <tr>
+                    <td class="time-column">14:00 - 15:00</td>
+                    <td>Annual general meeting of members of EASTC Convocation</td>
+                    <td>President of Convocation, EASTC students & Alumni</td>
+                </tr>
+                <tr>
+                    <td class="time-column">15:00 - 15:05</td>
+                    <td>Vote of Thanks and Closing</td>
+                    <td>President and Secretary of the Convocation</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

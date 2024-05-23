@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-wvXAxmfbl1GAKt4ozgYrBCu6PXVG+YE5K0H5O1vEy+1Y5BqQszMNb7T+BEQkLxVEq9aBey9/4sBpQE3UOwSPlQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Convocation Day</title>
+    <style>
+         body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: rgba(0, 0, 0, 0.5); 
+            background-image: url("IMG_3346.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        } 
+
+        .content-container {
+            background-color: rgba(255, 255, 255, 0.5); 
+            padding: 20px;
+        }
+       
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            background: url('2222.png') repeat-x center/contain;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .hero .container {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 0px;
+            text-align: center;
+            color: white;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+        .header .logo h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .header nav {
+            display: flex;
+            gap: 20px;
+        }
+        .header nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-size: 1em;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .main h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+        .main h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .main p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 800px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .buttons a {
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .card-image {
+            margin-top: 50px;
+        }
+        .card-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .social-links a {
+            color: #007bff;
+            margin: 0 10px;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .countdown div {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+        }
+        .countdown span {
+            display: block;
+            font-size: 2em;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            margin: 20px;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .card-content p {
+            font-size: 1em;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header nav {
+                flex-direction: column;
+                width: 100%;
+                display: none;
+            }
+            .header .menu-button {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+            }
+            .header nav a {
+                margin: 10px 0;
+            }
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+    <div class="hero">
+        <!-- <div class="container">
+            <h1>CONVOCATION DAY</h1>
+            <h2>Associate Professor of Political Science</h2>
+        </div> -->
+    </div>
+    <header class="header">
+        <div class="logo">
+            <h1>CONVOCATION DAY</h1>
+        </div>
+        <nav id="nav">
+            <a href="main_page.html">Home</a>
+            <a href="schedule_page.html">Schedule</a>
+            <!-- <a href="#contact">Contact</a> -->
+        </nav>
+        <div class="menu-button" onclick="toggleMenu()">☰</div>
+    </header>
+    <main class="main">
+        <h1>PROGRAMME FOR THE 6TH ANNUAL GENERAL MEETING OF THE CONVOCATION OF THE EASTERN AFRICA STATISTICAL TRAINING CENTRE (EASTC)</h1>
+        <h2>DATE: THURSDAY, 01ST DECEMBER, 2023</h2>
+        <h2>VENUE: FUNCTIONAL HALL</h2>
+        <h2>Overview of the 6th Convocation</h2>
+        <p>The 7th convocation of the Eastern Africa Statistical Training Centre of the year
+            2024 continues the tradition of bringing together academics, industry professionals, 
+            alumni, benefactors, and other stakeholders of the university community. It is an 
+            opportunity to present and exchange views on topical issues that touch teaching, 
+            research, and professional development.</p>
+       <p>This year's convocation has selected the 
+           topic: <b>"the role of official statistics and big data in the economic transformation 
+           and sustainable development of Tanzania"</b> as the standing point to reflect on the theme 
+           of this year's 18 November African Statistics Day. The theme states <b>"Modernizing data 
+           ecosystems to accelerate the implementation of African Continental Free Trade Area 
+           (AfCFTA): The role of official statistics and big data in the economic transformation 
+           and sustainable development of Africa".</b></p>
+       <p>African Statistics Day is celebrated each year 
+           on 18th of November. The commemoration aims, among others, to increase public awareness 
+           about the important role which statistics play in all aspects of social and economic 
+           development. This year's convocation aims to understand the African Continental Free 
+           Trade Area (AfCFTA) and the potential role statistics and big data play in discovering 
+           markets and serving customers across Africa.</p>
+        <div class="buttons">
+            <a href="schedule_page.html">View schedule</a>
+        </div>
+         <div class="buttons">
+            <a href="registration_page.html">Get yourself Registered</a>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <img src="event1.jpg" alt="Card Image">
+                <div class="card-content">
+                    <h3>Economic Transformation</h3>
+                    <p>In the context of the African Continental Free Trade Area (AfCFTA), reliable statistics are crucial for monitoring trade, identifying market potentials, and promoting intracontinental trade. These data empower decision-makers, help track progress, and respond effectively to crises..</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="event2.jpg" alt="Card Image">
+                <div class="card-content">
+                    <h3>African Statistics Day</h3>
+                    <p>In 2023, the theme for African Statistics Day has been chosen to highlight a crucial aspect of our continent's development. This presentation aims to raise awareness among decision-makers, technical and financial partners, data producers and users, researchers, and the public about the vital role of official statistics and big data. By understanding and leveraging these tools, we can accelerate the implementation of the Agreement Establishing the African Continental Free Trade Area (AfCFTA) and significantly promote intracontinental trade.
+</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="event4.jpg" alt="Card Image">
+                <div class="card-content">
+                    <h3>Dive Into Statistics</h3>
+                    <p>Join us as we delve into how accurate, timely, and comprehensive statistical data can drive policy decisions, enhance economic planning, and foster a more integrated and prosperous Africa.
+</p>
+                </div>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+
+        <!-- <div class="card-image">
+            <img src="your-image-url.jpg" alt="DigiCard">
+        </div> -->
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+        <div class="countdown" id="countdown">
+            <div>
+                <span id="days">0</span>
+                Days
+            </div>
+            <div>
+                <span id="hours">0</span>
+                Hours
+            </div>
+            <div>
+                <span id="minutes">0</span>
+                Minutes
+            </div>
+            <div>
+                <span id="seconds">0</span>
+                Seconds
+            </div>
+        </div>
+
+        
+    </main>
+    
+    
+    <footer class="footer">
+        &copy; 2024 CONVOCATION DAY. All rights reserved.
+    </footer>
+    
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('nav');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+            }
+        }
+
+        function countdown() {
+            const endDate = new Date("December 31, 2024 23:59:59").getTime();
+            const countdownElement = document.getElementById("countdown");
+            const daysElement = document.getElementById("days");
+            const hoursElement = document.getElementById("hours");
+            const minutesElement = document.getElementById("minutes");
+            const secondsElement = document.getElementById("seconds");
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = endDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                daysElement.innerText = days;
+                hoursElement.innerText = hours;
+                minutesElement.innerText = minutes;
+                secondsElement.innerText = seconds;
+
+                if (distance < 0) {
+                    clearInterval(interval);
+                    countdownElement.innerHTML = "EXPIRED";
+                }
+            }
+
+            const interval = setInterval(updateCountdown, 1000);
+        }
+
+        document.addEventListener("DOMContentLoaded", countdown);
+    </script>
+    </div>
+</body>
+</html>
